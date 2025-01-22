@@ -45,7 +45,7 @@ Prepare the dataset and training code according to the [official tutorial](https
 
 ## Performances
 
-The proposed model is tested on a single RTX4090. Here are the datasets: [dataset1](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/), [dataset2](https://cocodataset.org/#download).
+The proposed model is tested on a single RTX4090. Datasets download: [dataset1](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/), [dataset2](https://cocodataset.org/#download).
 
 Comparison with previous ACMs.
 
@@ -59,7 +59,7 @@ Comparison with previous ACMs.
 |  LKLD   | 0.956 | 0.957 | 0.958 | 5.5 |
 | DoG&EED | 0.960 | 0.961 | 0.963 | 7.2 |
 
-Comparison with deep learning models on the COCO benchmark. Pc and IoU are chosen as the metrics.
+Comparison with deep learning models. Pc and IoU are chosen as the metrics.
 
 |  Methods   |    plane    |    human    |    bear     |    zebra    | clock       | ship        | bus         | dog         |
 |:----------:|:-----------:|:-----------:|:-----------:|:-----------:|-------------|-------------|-------------|-------------|
