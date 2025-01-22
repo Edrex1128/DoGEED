@@ -45,7 +45,7 @@ Prepare the dataset and training code according to the [official tutorial](https
 
 ## Performances
 
-The proposed model is tested on a single RTX4090.
+The proposed model is tested on a single RTX4090. Here are the datasets: [dataset1](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/), [dataset2](https://cocodataset.org/#download).
 
 Comparison with previous ACMs.
 
