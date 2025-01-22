@@ -40,7 +40,7 @@ Then, modify ImgID according to the file name.
 ACM parameters can be adjusted at will.
 
 ### Training
-Prepare the dataset and training code according to the [official tutorial](https://github.com/ultralytics/yolov5).
+Prepare the dataset and training code according to the [official tutorial](https://github.com/ultralytics/yolov5) of YOLOv5.
 
 
 ## Performances
