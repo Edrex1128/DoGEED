@@ -35,8 +35,8 @@ parser.add_argument('--exist-ok', action='store_true', help='existing project/na
 opt = parser.parse_args()
 
 # Initialize ACM parameters
-delta1 = 0.1  # NDF iteration step size
-iterNum1 = 10  # NDF iteration number
+delta1 = 0.1  # EED iteration step size
+iterNum1 = 10  # EED iteration number
 sigma1 = 0.5  # Gaussian kernel standard deviation 1
 sigma2 = 4.5  # Gaussian kernel standard deviation 2
 w = 10  # Gaussian kernel size
@@ -69,7 +69,7 @@ e = Im
 eta = math.sqrt(9 * np.std(img))
 s = np.std(img)
 
-# NDF iteration
+# EED iteration
 for i in range(iterNum1):
     EED(e, eta, delta1)
 
