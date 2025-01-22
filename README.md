@@ -59,7 +59,7 @@ Comparison with previous ACMs.
 |  LKLD   | 0.956 | 0.957 | 0.958 | 5.5 |
 | DoG&EED | 0.960 | 0.961 | 0.963 | 7.2 |
 
-Comparison with deep learning models on Pc and IoU.
+Comparison with deep learning models on the COCO benchmark. Pc and IoU are chosen as the metrics.
 
 |  Methods   |    plane    |    human    |    bear     |    zebra    | clock       | ship        | bus         | dog         |
 |:----------:|:-----------:|:-----------:|:-----------:|:-----------:|-------------|-------------|-------------|-------------|
