@@ -1,6 +1,6 @@
 # Anisotropic edge-enhanced active contour model with Gaussian difference for robust multi-category image segmentation
 
-![flow chart](flow chart.jpg)
+![flow chart](flowchart.jpg)
 ![results](results.jpg)
 
 ## Brief start
