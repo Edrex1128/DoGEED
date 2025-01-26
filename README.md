@@ -12,7 +12,9 @@ Of course, the detection network can be replaced, readers are welcome to have a 
 
 ## Installation
 
-Open "Anaconda prompt"
+Install [Anaconda](https://www.anaconda.com/download/success) and Python 3.8.
+
+Open "Anaconda prompt" command window, and execute the following code:
 ```
 conda create -n DoGEED python=3.8
 conda activate DoGEED
@@ -25,7 +27,7 @@ pip install Cython==0.28.2
 pip install -r requirements.txt
 ```
 
-### Testing
+## Testing
 
 Open "main.py" and locate to
 ```
@@ -36,12 +38,25 @@ image0 = cv2.imread('' + ImgID + '.jpg')
 Enter the path of the weight after `default=` in the first line, here we enter `yolov5s.pt`.
 Enter the path of the source images after `default=` in the second line and `''` in the third line. 
 Note that it is an absolute path, such as `C:/xxx/`.
-Then, modify ImgID according to the file name.
-ACM parameters can be adjusted at will.
 
-### Training
-Prepare the dataset and training code according to the [official tutorial](https://github.com/ultralytics/yolov5) of YOLOv5.
+Put your test images into folder `images`, the names of the images are numbers starting from 1. Then, modify ImgID according to the file name.
+ACM parameters can be adjusted at will. Finally, run `main.py`.
 
+## Training
+Prepare the dataset and training code according to the [official tutorial](https://github.com/ultralytics/yolov5) of YOLOv5. 
+
+Put the configuration file of YOLOv5, i.e. the YAML file, in folder `models`. Open `models/yolo.py` and modify `cfg` in class `Model` to the required YAML file name. Make sure `cfg` remains unchanged during training and testing.
+
+Put the trained weight file in the main directory and modify the weight path in `main.py` to run it. 
+
+## Description of key information
+1. In `YOLO_head.py`, `Detect` function implements target detection and outputs the attribute values ​​of the detection box: the pixel coordinates of the center point and its offset in both length and width directions.
+2. In `main.py`, line 54, `Detect` function is called to output the attribute values of the detection box. These values are input ​​to ACM to achieve the automatic initialization of the level set function `InitialLSF`.
+3. In `main.py`, line 67, `cv2.filter2D` is used to construct the DoG operator.
+4. In `utils/functions.py`, `EED` function calculates $\lambda_1$ and $\lambda_2$ with the error function, and implements edge enhancement.
+5. In `main.py`, line 74, the DoG operator, the standard deviation of the original image and the the iteration step size are input to `EED` function to achieve edge enhancement and noise suppression.
+6. In `main.py`, line 91, `Drc` refers to the derivative of the Heaviside function. In line 92, the iteration of the level set function is realized. In line 93, the energy constraint of the level set function is realized. In line 94, the smoothing of the level set function is realized.
+7. More details are shown through code comments, please refer to the source code.
 
 ## Performances
 
