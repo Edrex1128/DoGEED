@@ -39,7 +39,7 @@ Enter the path of the weight after `default=` in the first line, here we enter `
 Enter the path of the source images after `default=` in the second line and `''` in the third line. 
 Note that it is an absolute path, such as `C:/xxx/`.
 
-Put your test images into folder `images`, the names of the images are numbers starting from 1. Then, modify ImgID according to the file name.
+Put your test images into folder `images`, the names of the images are numbers starting from 1. Then, modify `ImgID` according to the file name.
 ACM parameters can be adjusted at will. Finally, run `main.py`.
 
 ## Training
